@@ -58,3 +58,8 @@
 	margin-bottom: 20px;
 }
 
+.checkbox-grid li {
+    display: block;
+    float: left;
+    width: 25%;
+}

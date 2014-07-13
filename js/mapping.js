@@ -1,5 +1,5 @@
 // Configure the styles for our map
-var styles = {
+var defaultStyles = {
     "Library": {
         radius: 1500,
         fillColor: '#1f77b4' /*dark blue*/
@@ -39,14 +39,32 @@ var styles = {
 // Setup everything ready to go
 $(document).ready(function() {
 
+    createMap();
     $('#displayMap').click(createUserMap);
 
 })
 
 function createUserMap() {
-    createMap();
+    selectStyles();
     drawLegend();
     loadData();
+    $('html, body').animate({
+        scrollTop: $("#map").offset().top
+    }, 1000);
+}
+
+
+function selectStyles() {
+    selectedStyles = {};
+    $('input.data-available:checked').each(function() {
+        var name = this.name;
+        var category = $(this).val();
+        var radius = $('input[name=' + category + ']:checked').val();
+        selectedStyles[name] = {
+            radius: radius,
+            fillColor: defaultStyles[name].fillColor
+        };
+    });
 }
 
 function drawLegend() {
@@ -58,7 +76,7 @@ function drawLegend() {
             labels = [];
 
         // loop through our density intervals and generate a label with a colored square for each interval
-        $.each(styles, function(name, style) {
+        $.each(selectedStyles, function(name, style) {
             div.innerHTML +=
                 '<i style="background:' + style.fillColor + '"></i> ' +name + '<br>';
 
@@ -73,9 +91,6 @@ function drawLegend() {
 function createMap() {
 
     $('#map').css({height:'500px'});
-    $('html, body').animate({
-        scrollTop: $("#map").offset().top
-    }, 1000);
 
 
     map = L.map('map', {
@@ -134,8 +149,8 @@ function drawMarkers(data) {
         var circleType = val[0];
         var latitude = val[1];
         var longitude = val[2];
-        if (!styles[circleType]) {
-            console.log("No matching style for: " + circleType);
+        if (!selectedStyles[circleType]) {
+            // console.log("No matching style for: " + circleType);
             return;
         }
 
@@ -144,9 +159,9 @@ function drawMarkers(data) {
             return;
         }
 
-        var radius = styles[circleType].radius;
+        var radius = selectedStyles[circleType].radius;
         var style = {
-            color: styles[circleType].fillColor,
+            color: selectedStyles[circleType].fillColor,
             stroke: false,
             fillOpacity: 0.3
         }

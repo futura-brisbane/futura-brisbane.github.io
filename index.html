@@ -71,22 +71,22 @@
         
         <div id="collapseOne" class="panel-collapse collapse">
           <div class="panel-body">
-            <div class="btn-group btn-group-justified">
-              <div class="btn-group">
-                <button type="button" class="btn btn-default">500m</button>
-              </div>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default">1000m</button>
-              </div>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default">2000m</button>
-              </div>
+            <div class="btn-group btn-group-justified" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="radio" name="transport" value="500" checked> 500m
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="transport" value="1000"> 1000m
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="transport" value="2000"> 2000m
+              </label>
             </div>
 
             <ul class="checkbox-grid">
               <div class="checkbox">
                 <label>
-                  <input type="checkbox"> Bus Stops
+                  <input type="checkbox" class="data-available" name="BusStops" value="transport"> Bus Stops
                 </label>
               </div>
             </ul>        
@@ -109,16 +109,17 @@
         
         <div id="collapseTwo" class="panel-collapse collapse">
           <div class="panel-body">
-            <div class="btn-group btn-group-justified">
-              <div class="btn-group">
-                <button type="button" class="btn btn-default">500m</button>
-              </div>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default">1000m</button>
-              </div>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default">2000m</button>
-              </div>
+
+            <div class="btn-group btn-group-justified" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="radio" name="safety" value="500" checked> 500m
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="safety" value="1000" > 1000m
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="safety" value="2000" > 2000m
+              </label>
             </div>
 
             <ul class="checkbox-grid">
@@ -146,42 +147,31 @@
         
         <div id="collapseThree" class="panel-collapse collapse">
           <div class="panel-body">
-            <div class="btn-group btn-group-justified">
-              <div class="btn-group">
-                <button type="button" class="btn btn-default">500m</button>
-              </div>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default">1000m</button>
-              </div>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default">2000m</button>
-              </div>
+  
+            <div class="btn-group btn-group-justified" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="radio" name="entertainment" value="500" checked> 500m
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="entertainment" value="1000" > 1000m
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="entertainment" value="2000" > 2000m
+              </label>
             </div>
 
             <ul class="checkbox-grid">
               <div class="checkbox">
                 <label>
-                  <input type="checkbox"> Regional Business Centres
+                  <input type="checkbox" class="data-available" name="BusinessCentre" value="entertainment"> Regional Business Centres
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox"> Active Parks
+                  <input type="checkbox" class="data-available" name="Parks" value="entertainment"> Active Parks
                 </label>
               </div>
-            </ul>  
-            <!-- Faisal CheckBox 
-            <ul class="checkbox-grid">
-              <li><input type="checkbox" name="text1" value="value1" /><label for="text1">Text 1</label></li>
-              <li><input type="checkbox" name="text2" value="value2" /><label for="text2">Text 2</label></li>
-              <li><input type="checkbox" name="text3" value="value3" /><label for="text3">Text 3</label></li>
-              <li><input type="checkbox" name="text4" value="value4" /><label for="text4">Text 4</label></li>
-              <li><input type="checkbox" name="text5" value="value5" /><label for="text5">Text 5</label></li>
-              <li><input type="checkbox" name="text6" value="value6" /><label for="text6">Text 6</label></li>
-              <li><input type="checkbox" name="text7" value="value7" /><label for="text7">Text 7</label></li>
-              <li><input type="checkbox" name="text8" value="value8" /><label for="text8">Text 8</label></li>
-            </ul>
-            -->
+            </ul> 
 
 
           </div>
@@ -202,27 +192,28 @@
         
         <div id="collapseFour" class="panel-collapse collapse">
           <div class="panel-body">
-            <div class="btn-group btn-group-justified">
-              <div class="btn-group">
-                <button type="button" class="btn btn-default">500m</button>
-              </div>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default">1000m</button>
-              </div>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default">2000m</button>
-              </div>
+
+            <div class="btn-group btn-group-justified" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="radio" name="public-services" value="500" checked> 500m
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="public-services" value="1000" > 1000m
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="public-services" value="2000" > 2000m
+              </label>
             </div>
 
             <ul class="checkbox-grid">
               <div class="checkbox">
                 <label>
-                  <input type="checkbox"> WiFi HotSpots
+                  <input type="checkbox" class="data-available" name="WifiHotSpot" value="public-services"> WiFi HotSpots
                 </label>
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox"> Libraries
+                  <input type="checkbox" class="data-available" name="Library" value="public-services"> Libraries
                 </label>
               </div>
             </ul>  
@@ -246,22 +237,23 @@
         
         <div id="collapseFive" class="panel-collapse collapse">
           <div class="panel-body">
-            <div class="btn-group btn-group-justified">
-              <div class="btn-group">
-                <button type="button" class="btn btn-default">500m</button>
-              </div>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default">1000m</button>
-              </div>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default">2000m</button>
-              </div>
+
+            <div class="btn-group btn-group-justified" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="radio" name="special-needs" value="500" checked> 500m
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="special-needs" value="1000" > 1000m
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="special-needs" value="2000" > 2000m
+              </label>
             </div>
 
             <ul class="checkbox-grid">
               <div class="checkbox">
                 <label>
-                  <input type="checkbox"> Approved Pet Shops
+                  <input type="checkbox" class="data-available" name="PetShops" value="special-needs"> Approved Pet Shops
                 </label>
               </div>
             </ul>  

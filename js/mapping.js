@@ -16,7 +16,7 @@ var defaultStyles = {
     },
     "BusStops": {
         radius: 500,
-        fillColor: '#d62728' /*red*/
+        fillColor: '#ACFA58' /* kind of yellow green */
 
     },
     "Parks": {
@@ -33,6 +33,10 @@ var defaultStyles = {
         radius: 500,
         fillColor: '#99CCFF' /*light blue*/
 
+    },
+    "FireStation": {
+        radius: 500,
+        fillColor: '#d62728' /*red*/
     }
 }
 

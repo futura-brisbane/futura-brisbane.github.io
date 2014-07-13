@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
     <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
 
+    <!-- Title Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="resources/futura-title.png" />
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -31,6 +34,7 @@
     <div class="container">
       <div class="col-md-12 column">
           <div class="section-heading">
+            <img src="resources/futura-resized.png" alt="futura">
             <h2>futura</h2>
             <hr>
             <p>
@@ -44,8 +48,9 @@
       </div>
     </div>
 
-    <div class="panel-group" id="accordion">
 
+    <div class="panel-group" id="accordion">
+      <!-- Transport -->
       <div class="panel panel-default">
         <div class="panel-heading" style="overflow: hidden;">
           <h4 class="panel-title">
@@ -55,72 +60,113 @@
          
           <!--<input type="text" class="input-medium" name="s" placeholder="xxkms" value="">-->
 
-          <a data-toggle="collapse" class="btn btn-default btn-xs pull-right" data-parent="#accordion" href="#collapseOne">
+          <a data-toggle="collapse" class="btnGlyphicon btn-default btn-xs pull-right" data-parent="#accordion" href="#collapseOne">
               <span class="glyphicon glyphicon-chevron-down"></span>
           </a>      
         </div>
         
         <div id="collapseOne" class="panel-collapse collapse">
           <div class="panel-body">
-            
-             <p class="just">First</p>
-
-             <div class="btn-group btn-group-justified">
-            <div class="btn-group">
-            <button type="button" class="btn btn-default">500m</button>
-            </div>
-            <div class="btn-group">
-            <button type="button" class="btn btn-default">1000m</button>
-            </div>
-            <div class="btn-group">
-            <button type="button" class="btn btn-default">2000m</button>
-            </div>
-            </div>
-          
-        
+            <div class="btn-group btn-group-justified">
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">500m</button>
               </div>
-            </p>
-          
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">1000m</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">2000m</button>
+              </div>
+            </div>
+
+            <ul class="checkbox-grid">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Bus Stops
+                </label>
+              </div>
+            </ul>        
           </div>
         </div>
-
-        
       </div>
+      <!-- /Transport -->
 
+      <!-- Safety -->
       <div class="panel panel-default">
         <div class="panel-heading" style="overflow: hidden;">
           <h4 class="panel-title">
             Safety
           </h4>
 
-          <a data-toggle="collapse" class="btn btn-default btn-xs pull-right" data-parent="#accordion" href="#collapseTwo">
+          <a data-toggle="collapse" class="btnGlyphicon btn-default btn-xs pull-right" data-parent="#accordion" href="#collapseTwo">
               <span class="glyphicon glyphicon-chevron-down"></span>
           </a>      
         </div>
         
         <div id="collapseTwo" class="panel-collapse collapse">
           <div class="panel-body">
-            <p class="just">First</p>
+            <div class="btn-group btn-group-justified">
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">500m</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">1000m</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">2000m</button>
+              </div>
+            </div>
+
+            <ul class="checkbox-grid">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Crime Rates
+                </label>
+              </div>
+            </ul>  
           </div>
         </div>
       </div>
+      <!-- /Safety -->
 
+      <!-- Entertainment -->
       <div class="panel panel-default">
         <div class="panel-heading" style="overflow: hidden;">
           <h4 class="panel-title">
             Entertainment
           </h4>
-          <a data-toggle="collapse" class="btn btn-default btn-xs pull-right" data-parent="#accordion" href="#collapseThree">
-            
+          <a data-toggle="collapse" class="btnGlyphicon btn-default btn-xs pull-right" data-parent="#accordion" href="#collapseThree">
               <span class="glyphicon glyphicon-chevron-down"></span>
-      
           </a>      
         </div>
         
         <div id="collapseThree" class="panel-collapse collapse">
           <div class="panel-body">
-            <p class="just">First</p>
+            <div class="btn-group btn-group-justified">
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">500m</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">1000m</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">2000m</button>
+              </div>
+            </div>
 
+            <ul class="checkbox-grid">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Regional Business Centres
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Active Parks
+                </label>
+              </div>
+            </ul>  
+            <!-- Faisal CheckBox 
             <ul class="checkbox-grid">
               <li><input type="checkbox" name="text1" value="value1" /><label for="text1">Text 1</label></li>
               <li><input type="checkbox" name="text2" value="value2" /><label for="text2">Text 2</label></li>
@@ -131,38 +177,63 @@
               <li><input type="checkbox" name="text7" value="value7" /><label for="text7">Text 7</label></li>
               <li><input type="checkbox" name="text8" value="value8" /><label for="text8">Text 8</label></li>
             </ul>
+            -->
 
 
           </div>
         </div>
       </div>
+      <!-- /Entertainment -->
 
+      <!-- Public Services -->
       <div class="panel panel-default">
         <div class="panel-heading" style="overflow: hidden;">
           <h4 class="panel-title">
             Public Services
           </h4>
-
-          <a data-toggle="collapse" class="btn btn-default btn-xs pull-right" data-parent="#accordion" href="#collapseFour">
-           
-              <span class="glyphicon glyphicon-chevron-down"></span>
-        
+          <a data-toggle="collapse" class="btnGlyphicon btn-default btn-xs pull-right" data-parent="#accordion" href="#collapseFour">
+            <span class="glyphicon glyphicon-chevron-down"></span>
           </a>      
         </div>
         
         <div id="collapseFour" class="panel-collapse collapse">
           <div class="panel-body">
-            <p class="just">First</p>
+            <div class="btn-group btn-group-justified">
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">500m</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">1000m</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">2000m</button>
+              </div>
+            </div>
+
+            <ul class="checkbox-grid">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> WiFi HotSpots
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Libraries
+                </label>
+              </div>
+            </ul>  
           </div>
         </div>
       </div>
+      <!-- /Public Services -->
 
+      <!-- Special Needs -->
       <div class="panel panel-default">
         <div class="panel-heading" style="overflow: hidden;">
           <h4 class="panel-title">
             Special Needs
           </h4>
-          <a data-toggle="collapse" class="btn-gra btn btn-default btn-xs pull-right" data-parent="#accordion" href="#collapseFive">
+          <a data-toggle="collapse" class="btn-gra btnGlyphicon btn-default btn-xs pull-right" data-parent="#accordion" href="#collapseFive">
            
               <span class="glyphicon glyphicon-chevron-down"></span>
         
@@ -171,24 +242,41 @@
         
         <div id="collapseFive" class="panel-collapse collapse">
           <div class="panel-body">
-            <p class="just">First</p>
+            <div class="btn-group btn-group-justified">
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">500m</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">1000m</button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default">2000m</button>
+              </div>
+            </div>
+
+            <ul class="checkbox-grid">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Approved Pet Shops
+                </label>
+              </div>
+            </ul>  
           </div>
         </div>
       </div>
+    </div>
+    <!-- /Special Needs -->
 
-      <div class="row">
-        <div class="col-md-12">
-          <p>
-            <button id="displayMap" type="button" class="btn btn-primary btn-lg">Display Map</button>
-          </p>
-        </div>
+    <!-- GO button -->
+    <div class="container">
+      <div class="col-md-2 col-md-offset-5">
+        <p>
+          <button id="displayMap" type="button" class="btn btn-primary btn-lg">Display Map</button>
+        </p>
       </div>
 
-      <div class="row">
-        <div class="col-md-12">
-
+      <div class="col-md-12">
         <div id="map"></div>
-        </div>
       </div>
     </div>
 

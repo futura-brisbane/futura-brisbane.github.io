@@ -44,11 +44,33 @@ $(document).ready(function() {
 })
 
 function createUserMap() {
-    drawMap();
+    createMap();
+    drawLegend();
     loadData();
 }
 
-function drawMap() {
+function drawLegend() {
+    var legend = L.control({position: 'bottomright'});
+
+    legend.onAdd = function (map) {
+
+        var div = L.DomUtil.create('div', 'info legend'),
+            labels = [];
+
+        // loop through our density intervals and generate a label with a colored square for each interval
+        $.each(styles, function(name, style) {
+            div.innerHTML +=
+                '<i style="background:' + style.fillColor + '"></i> ' +name + '<br>';
+
+            });
+
+        return div;
+    };
+
+    legend.addTo(map);
+}
+
+function createMap() {
 
     $('#map').css({height:'500px'});
     $('html, body').animate({
@@ -98,11 +120,11 @@ function processData(data) {
         }
     }
 
-    drawCircles(csvData);
+    drawMarkers(csvData);
 }
 
 var markers = [];
-function drawCircles(data) {
+function drawMarkers(data) {
     $.each(markers, function(i, marker) {
         map.removeLayer(marker);
     });

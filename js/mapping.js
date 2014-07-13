@@ -2,36 +2,36 @@
 var styles = {
     "Library": {
         radius: 1500,
-        fillColor: '#ff0'
+        fillColor: '#1f77b4' /*dark blue*/
     },
     "Schools": {
         radius: 500,
-        fillColor: '#03f'
+        fillColor: '#ff7f0e' /*orange*/
 
     },
     "BusinessCentre": {
         radius: 500,
-        fillColor: '#03f'
+        fillColor: '#2ca02c' /*green*/
 
     },
     "BusStops": {
         radius: 500,
-        fillColor: '#03f'
+        fillColor: '#d62728' /*red*/
 
     },
     "Parks": {
         radius: 500,
-        fillColor: '#03f'
+        fillColor: '#FFCCFF' /*Pink*/
 
     },
     "PetShops": {
         radius: 500,
-        fillColor: '#03f'
+        fillColor: '#e377c2' /*dark pink*/
 
     },
     "WifiHotSpot": {
         radius: 500,
-        fillColor: '#03f'
+        fillColor: '#99CCFF' /*light blue*/
 
     }
 }
@@ -126,7 +126,7 @@ function drawCircles(data) {
         var style = {
             color: styles[circleType].fillColor,
             stroke: false,
-            fillOpacity: 0.5
+            fillOpacity: 0.3
         }
         var marker = L.circle([latitude, longitude], radius, style);
 

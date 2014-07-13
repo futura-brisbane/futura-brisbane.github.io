@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Futura Map Demo!</title>
+<title>Futura Map Demo!</title>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
 
     <!-- Leaflet -->
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-	<script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
-	<style>
-	#map {
-		height: 500px;
-	}
-	</style>
+<script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+<style>
+#map {
+height: 500px;
+}
+</style>
 </head>
 <body>
 
@@ -37,11 +37,11 @@ map.addLayer(MapQuestOpen_OSM);
 
 
 $.ajax({
-	type: "GET",
-	url: "TheDataBase.csv",
+type: "GET",
+url: "TheDataBase.csv",
     dataType: "text",
     success: function(data) {
-    	processData(data);
+     processData(data);
     }
 })
 
@@ -51,6 +51,31 @@ var styles = {
         fillColor: '#ff0'
     },
     "Schools": {
+        radius: 500,
+        fillColor: '#03f'
+
+    },
+    "BusinessCentre": {
+        radius: 500,
+        fillColor: '#03f'
+
+    },
+    "BusStops": {
+        radius: 500,
+        fillColor: '#03f'
+
+    },
+    "Parks": {
+        radius: 500,
+        fillColor: '#03f'
+
+    },
+    "PetShops": {
+        radius: 500,
+        fillColor: '#03f'
+
+    },
+    "WifiHotSpot": {
         radius: 500,
         fillColor: '#03f'
 

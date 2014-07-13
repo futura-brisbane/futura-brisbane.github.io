@@ -67,8 +67,12 @@ function selectStyles() {
     });
 }
 
+legend = 0;
 function drawLegend() {
-    var legend = L.control({position: 'bottomright'});
+    if (legend) {
+        map.removeControl(legend);
+    }
+    legend = L.control({position: 'bottomright'});
 
     legend.onAdd = function (map) {
 
